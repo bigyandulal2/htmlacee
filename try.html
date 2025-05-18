@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        /* border: 1px solid red; */
+        position: relative;
+        border: 1px solid black;
+      }
+      button {
+        padding: 10px 20px;
+        border-radius: 25px;
+        background-color: red;
+        color: white;
+        border: none;
+      }
+
+      button.select::after {
+        content: "🤫";
+      }
+
+      .item_list {
+        margin: 0;
+        border: 2px solid black;
+        list-style: none;
+        display: inline-block;
+        position: absolute;
+        left: 0px;
+        transform: scaleY(0);
+        transition: transform 0.2s ease-in-out;
+        transform-origin: top center;
+        top: 100%;
+        pointer-events: none;
+      }
+
+      .show {
+        transform: scaleY(1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <button class="select">select</button>
+      <ul class="item_list">
+        <li>apple</li>
+        <li>mango</li>
+        <li>oranges</li>
+        <li>pappaya</li>
+      </ul>
+    </div>
+    <script>
+      const item_list = document.querySelector(".item_list");
+      const parent = document.querySelector(".parent");
+      const select = document.querySelector(".select");
+
+      parent.addEventListener("mouseenter", function () {
+        if (!item_list.classList.contains("show")) {
+          item_list.classList.add("show");
+        }
+      });
+      parent.addEventListener("mouseleave", function () {
+        item_list.addEventListener("mouseenter", function () {
+          item_list.classList.add("show");
+        });
+        item_list.addEventListener("mouseenter", function () {
+          item_list.classList.remove("show");
+        });
+        item_list.classList.remove("show");
+      });
+    </script>
+  </body>
+</html>
