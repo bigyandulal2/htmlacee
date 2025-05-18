@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
+    <!-- header starts -->
+    <header class="header">
       <h1>AceeSolution</h1>
       <nav>
         <ul>
@@ -20,26 +21,22 @@
         </ul>
       </nav>
     </header>
+    <!-- header ends  -->
+    <!-- main starts -->
     <main>
-      <section>
+      <section class="headings">
         <h1>this is header 1 and block level element</h1>
         <h2>this is header 2 and block level element</h2>
         <h3>this is header 3 and block level element</h3>
         <h4>this is header 4 and block level element</h4>
         <h5>this is header 5 and block level element</h5>
         <h6>this is header 6 and block level element</h6>
+
         <p>this is the paragraph and block level element</p>
       </section>
 
-      <!-- semantic tags  -->
-      <section>
-        <h1>hello world</h1>
-        <p>
-          this is the hello world description. it is for beginner coder to teach
-          them programming very basic .
-        </p>
-      </section>
-      <section>
+      <!-- section article starts -->
+      <section class="article">
         <article>
           <h1>this is the product card heading</h1>
           <p>this product is awesome. you must have to try about it as well</p>
@@ -61,8 +58,8 @@
           <footer>this is the footer section for this article</footer>
         </article>
       </section>
-      <!-- section list -->
-      <section>
+      <!-- section media list -->
+      <section class="media">
         <ol type="1" reversed>
           <li>item1</li>
           <li>item2</li>
@@ -104,7 +101,7 @@
         </div>
       </section>
 
-      <section>
+      <section class="product_table">
         <table>
           <thead>
             <tr>
@@ -131,7 +128,7 @@
         </table>
       </section>
       <!-- section  -->
-      <section>
+      <section class="media_section">
         <div style="height: 228px; width: 204px" tabindex="2">
           <iframe
             src="https://audio.com/embed/audio/1795710633346764?theme=light"
@@ -171,41 +168,6 @@
           allowfullscreen
           >hee</iframe
         >
-
-        <table border="1">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Class</th>
-              <th>Roll No</th>
-              <th colspan="2">Phone Number</th>
-            </tr>
-            <tr>
-              <!-- <th></th>
-      <th></th>
-      <th></th> -->
-              <th colspan="3"></th>
-              <th>Primary</th>
-              <th>Secondary</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Bigyan</td>
-              <td>UKG</td>
-              <td>155</td>
-              <td>98888888888</td>
-              <td>98343423242</td>
-            </tr>
-            <tr>
-              <td>Bisworaj</td>
-              <td>LKG</td>
-              <td>100</td>
-              <td>9876543210</td>
-              <td>9812345678</td>
-            </tr>
-          </tbody>
-        </table>
       </section>
       <!-- section form -->
       <section>
@@ -236,7 +198,7 @@
         </form>
       </section>
 
-      <!-- this is the template -->
+      <!-- this is the template section-->
       <section>
         <template id="greeting-template">
           <div class="greeting">
@@ -274,6 +236,8 @@
         </my-box>
       </section>
     </main>
+    <!-- main section ends -->
+    <!-- footer section starts -->
     <footer>@all rights reserved 2025</footer>
 
     <script src="index.js"></script>
